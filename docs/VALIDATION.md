@@ -18,12 +18,14 @@ This file records what has actually been executed for v0.4.0.
 
 ## CI validation after push
 
-GitHub Actions installs the declared dependencies and runs the complete suite on supported Python
-versions. A separate job replaces the released pgmpy package with pgmpy's current `dev` branch to
-identify API drift relevant to eventual upstreaming.
+GitHub Actions completed successfully on 21 August 2026. The full test suite passed
+against the released pgmpy dependency on Python 3.10, 3.11, 3.12, 3.13, and 3.14.
+The separate compatibility job against pgmpy's current `dev` branch also passed.
 
 ## Interpretation
 
-A green local dependency-light suite validates the algorithmic helpers and invariants, but it is
-not a substitute for the external integration suite. The repository should not claim full pgmpy
-integration until the CI job is green.
+The dependency-light local suite validates the algorithmic helpers and invariants,
+while the successful GitHub Actions matrix validates the pgmpy+DEAP estimator
+integration across the supported Python versions and against pgmpy's development
+branch at the time of testing. These software checks do not establish superiority
+in DAG recovery; that remains the purpose of the pre-specified benchmark study.
