@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this research software, please cite the repository and any associated paper."
+title: "BN Genetic Search: feasibility-preserving evolutionary Bayesian-network structure learning"
+type: software
+authors:
+  - family-names: Miraflor
+    given-names: James Matthew
+    affiliation: "Scientific Computing Laboratory (SCL), Department of Computer Science (DCS), University of the Philippines Diliman"
+    email: jbmiraflor@up.edu.ph
+version: 0.4.0
+date-released: 2026-08-21
+repository-code: https://github.com/miraflor/bn-genetic-search
+license: MIT

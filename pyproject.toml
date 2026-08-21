@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bn-genetic-search"
+version = "0.4.0"
+description = "Feasibility-preserving evolutionary Bayesian-network structure learning with pgmpy and DEAP"
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+license = {text = "MIT"}
+authors = [{name = "James Matthew Miraflor", email = "jbmiraflor@up.edu.ph"}]
+keywords = ["bayesian networks", "structure learning", "genetic algorithms", "causal discovery", "pgmpy", "deap"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "pgmpy>=1.1.2,<2",
+  "deap>=1.4.4,<2",
+  "networkx>=3.0",
+  "numpy>=2.0",
+  "pandas>=1.5",
+  "scikit-learn>=1.2",
+  "joblib>=1.2",
+  "tqdm>=4.64",
+]
+
+[project.urls]
+Repository = "https://github.com/miraflor/bn-genetic-search"
+Issues = "https://github.com/miraflor/bn-genetic-search/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5", "build>=1.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
